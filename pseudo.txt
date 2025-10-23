@@ -1,26 +1,29 @@
 -ask the user for input '?'
 
 -the program recognises the below commands;
-	Add 	- adds a bird
-		- asks user to input 'Name: '
-		- asks user to input 'Name in Latin: '
+	add 	- adds a bird, then proceeds to;
+		- ask user to input 'Name: '
+		- ask user to input 'Name in Latin: '
 
-	Spotted - adds a sighting
+		-take in the name inputs and create a bird object
+			then store it in the bird array.
+
+	spotted - adds a sighting
 		- if not in database of birds, the program then
 			outputs 'Not a bird!'		
 
-	All 	- prints all birds
+	all 	- prints all birds
 		- outputs all birds and displays information
 			'NameOfBird (Latin Name): number of sightings
 
-	One 	- prints one bird
+	one 	- prints one bird
 		- asks the user 'Bird?', takes in the string value
 			representing the name of the bird.
 		- then outputs the full information of the 
 			single bird which the name was entered.
 			(format the same from All command)
 		
-	Quit - ends the program
+	quit - ends the program
 
 -struct BirdArray
 	array: [Bird; 5]
@@ -47,7 +50,8 @@ OR
 	      latin_name:
 	      sighting:
 	    }
-	BirdArray{array: [Bird; 5]}
+	BirdArray{array: [Bird; 5]} or??
+	BirdArray([Bird; 5])
 
 	impl BirdDatabase
 		add
@@ -56,6 +60,11 @@ OR
 		spotted
 
 ??
+
+CONTINUE HERE!!
+-So an array of Bird objects is possible. We now just have to find
+a way to create a series of Bird objs through a loop construct,
+and simultaneously store it in the array of Bird objs.
 
 
 
