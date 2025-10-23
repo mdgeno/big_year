@@ -1,0 +1,62 @@
+-ask the user for input '?'
+
+-the program recognises the below commands;
+	Add 	- adds a bird
+		- asks user to input 'Name: '
+		- asks user to input 'Name in Latin: '
+
+	Spotted - adds a sighting
+		- if not in database of birds, the program then
+			outputs 'Not a bird!'		
+
+	All 	- prints all birds
+		- outputs all birds and displays information
+			'NameOfBird (Latin Name): number of sightings
+
+	One 	- prints one bird
+		- asks the user 'Bird?', takes in the string value
+			representing the name of the bird.
+		- then outputs the full information of the 
+			single bird which the name was entered.
+			(format the same from All command)
+		
+	Quit - ends the program
+
+-struct BirdArray
+	array: [Bird; 5]
+	
+	impl BirdArray
+		add
+		one
+		all
+ 
++
+
+-struct Bird
+	name: 
+	name in latin
+	mut sighting
+	
+	impl Bird
+		print
+
+OR 
+
+-enum BirdDatabase
+	Bird{ name:
+	      latin_name:
+	      sighting:
+	    }
+	BirdArray{array: [Bird; 5]}
+
+	impl BirdDatabase
+		add
+		one
+		all
+		spotted
+
+??
+
+
+
+
