@@ -66,6 +66,28 @@ CONTINUE HERE!!
 a way to create a series of Bird objs through a loop construct,
 and simultaneously store it in the array of Bird objs.
 
+LATEST CONCLUSION
+-It is very difficult for my current level to be able to code a 
+concept of a database for birds. My knowledge is currently limited
+to only tuples and arrays for collections constructs. I've researched
+for solutions, work arounds, and it has always been advised to use
+vecotrs for these types of scenarios, which I will be tackling on
+very soon.
+-The limitations I came to realise are that arrays have a fixed
+size, although I compromised with proceeding with an array length
+of 5 values.
+-Another limitation is creating an Array of objects. When
+instantiating an array, it is necessary that there be values filled
+in each index, for instance an array of integers need to have atleast
+0s althrough out the index to represent an empty array. The 
+limitation is that creating an empty array of Bird objects is
+somewhat not doable as the program handles different commands during
+runtime and adding a bird obj in to the array is only one of them.
+Therefore, an array with empty slots is really necessary to 
+satisfy the required features of the program.
+-I shall resume this program as soon as I have gained the vector
+ability.  
+
 
 
 
