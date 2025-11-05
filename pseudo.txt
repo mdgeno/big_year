@@ -25,6 +25,21 @@
 		
 	quit - ends the program
 
+
+**CONTINUE HERE!!
+-emtpy array done, add command done
+	-program an automatic array increase feature
+	-initialize a counter
+	-create empty new array with new size
+	    ??INITIALIZING THE SIZE OF THE NEW ARRAY NOT POSSIBLE??
+	-add values of old array (for each with index)
+	-transfer ownership of new array to old (directly)
+
+-continue with other commands?
+	
+
+
+=============================================
 -struct BirdArray
 	array: [Bird; 5]
 	
@@ -61,7 +76,7 @@ OR
 
 ??
 
-CONTINUE HERE!!
+
 -So an array of Bird objects is possible. We now just have to find
 a way to create a series of Bird objs through a loop construct,
 and simultaneously store it in the array of Bird objs.
@@ -86,7 +101,22 @@ runtime and adding a bird obj in to the array is only one of them.
 Therefore, an array with empty slots is really necessary to 
 satisfy the required features of the program.
 -I shall resume this program as soon as I have gained the vector
-ability.  
+ability.
+-(UPDATE as of: Nov 5 2025) I was able to create an empty array or
+atleast an idea of an array that represents an empty array of Bird Struct objects.
+This was purely from information gathered from the compiler error
+displaying information about some types such as Strings do not implement
+the Copy trait, which as well allowed me to discover additional
+information by looking through the Copy trait rust official 
+documentation, which then led me to learn about a line of code/algorithm
+that would allow objects such as String Structs, or the modified types
+such as the Bird Struct type, to be cloned in an initialised array 
+and to represent the cloned values as empty values. 
+	-however, I was at a halt from this point as when proceeding
+	towards the next steps of creating a new array with an 
+	increased size, I am not able to make rust recognise the 
+	increased value that I give to the new array with increased
+	size that I was trying to initialize. 
 
 
 

@@ -1,6 +1,7 @@
-//use std::io;
+use std::io;
 
 #[derive(Debug)]
+#[derive(Clone)]
 struct Bird{ 
 	name: String,
 	latin_name: String 
@@ -8,33 +9,49 @@ struct Bird{
 
 fn main(){
 	
-	let bird_1 = Bird{
-			name: String::from("1"),
-			latin_name: String::from("11")
+	let empty_bird = Bird{ name: String::from("empty"), latin_name: String::from("empty")};
+	let mut array: [Bird; 5] = std::array::from_fn(|_| empty_bird.clone());
+	let mut counter = 0;
+	loop{
+		println!("Enter command:");
+		let mut input = String::new();
+		io::stdin().read_line(&mut input).expect("enter correct input");
+		println!(" ");
+
+		match input.trim(){
+			"add" => {array[counter] = add();
+				  counter+=1;
+				  println!(" ");},
+		            _ => break
+		}
+
+		if counter == array.len()-1{
+			let mut new_array: [Bird; array.len()*0.50] = std::array::from_fn(|_| empty_bird.clone());
+			let mut i=0;
+			for val in array{
+				new_array[i] = val;
+				i+=1;
+			}
+			let array = new_array;
+		}	
+	}	
+
+	println!(" ");
+	for b in array{
+		println!("{} {}", b.name, b.latin_name);
 	};
-
-	let bird_2 = Bird{
-			name: String::from("2"),
-			latin_name: String::from("22")
-	};
-
-	let bird_3 = Bird{
-			name: String::from("3"),
-			latin_name: String::from("33")
-	};
-
-	let bird_array: [Bird; 3] = [bird_1, bird_2, bird_3];
-
-	println!("bird array contents {:?}", bird_array);
-
-/*	
-	print!("Name: ");
-	let mut bird_name = String::new();
-	io::stdin().read_line(&mut bird_name).expect("enter correct input");
-
-	print!("Name in Latin: ");
-	let mut latin_bird = String::new();
-	io::stdin().read_line(&mut latin_bird).expect("enter correct input");
-*/
-		
+	println!("counter is at {counter}");	
 }
+
+fn add() -> Bird{
+	println!("name: ");
+	let mut n = String::new();
+	io::stdin().read_line(&mut n).expect("enter correct input");
+	
+	println!("latin name: ");
+	let mut ln = String::new();
+	io::stdin().read_line(&mut ln).expect("enter correct input");
+	
+	Bird{ name: n.trim().to_string(), latin_name: ln.trim().to_string()}
+}
+	
