@@ -14,14 +14,21 @@ fn main(){
 			};
 	let bird2 = Bird{ name: String::from("bird2_name"),
 			  latin_name: String::from("bird2_latin_name"),
-			  sightings: 4
+			  sightings: 0
 			};
 
 
 	birds.add(bird1);
 	birds.add(bird2);
 	
-	birds.list();	
+	birds.all();
+
+	println!(" ");
+
+	birds.spotted(&String::from("bird2_name"));
+	birds.all();
+
+	birds.spotted(&String::from("random"));	
 
 }
 	

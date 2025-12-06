@@ -35,7 +35,8 @@
 	     database
  <OK>
 
--try to continue implementing functions with the spotted commands and 
+CONTINUE HERE!
+-try to continue implementing functions with the spotted commands<OK> and 
  one commands.
 -when making it user interactive take note of the sightings field of the
  bird object, to be automatically set to 0 initially.

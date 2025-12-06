@@ -18,9 +18,19 @@ impl BirdDatabase{
 		self.birds.push(bird);
 	}
 
-	pub fn list(&self){
+	pub fn all(&self){
 		for bird in &self.birds{
 			println!("{} ({}): number of sightings {}", bird.name, bird.latin_name, bird.sightings);
 		}
+	}
+
+	pub fn spotted(&mut self, bird_name: &String){
+		for b in &mut self.birds{
+			if b.name == *bird_name{
+				b.sightings +=1;
+				return;
+			}
+		}	
+		println!("not a bird");
 	}
 }
