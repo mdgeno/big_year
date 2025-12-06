@@ -26,17 +26,19 @@
 	quit - ends the program
 
 
-**CONTINUE HERE!!
--emtpy array done, add command done
-	-program an automatic array increase feature
-	-initialize a counter
-	-create empty new array with new size
-	    ??INITIALIZING THE SIZE OF THE NEW ARRAY NOT POSSIBLE??
-	-add values of old array (for each with index)
-	-transfer ownership of new array to old (directly)
+-complete the use documentation of diagram/use case scenario.
 
--continue with other commands?
-	
+                  Main/UI
+		/	  \
+	    backend  --	 game
+		|
+	     database
+ <OK>
+
+-try to continue implementing functions with the spotted commands and 
+ one commands.
+-when making it user interactive take note of the sightings field of the
+ bird object, to be automatically set to 0 initially.
 
 
 =============================================
