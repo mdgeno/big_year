@@ -33,4 +33,13 @@ impl BirdDatabase{
 		}	
 		println!("not a bird");
 	}
+
+	pub fn view(&self, bird_name: &String){
+		for b in &self.birds{
+			if b.name == *bird_name{
+				println!("{} ({}): number of sightings {}", b.name, b.latin_name, b.sightings);
+				break;
+			}
+		}
+	}
 }

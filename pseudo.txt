@@ -36,8 +36,8 @@
  <OK>
 
 CONTINUE HERE!
--try to continue implementing functions with the spotted commands<OK> and 
- one commands.
+-try to continue implementing functions with the spotted commands and 
+ one commands. <OK>
 -when making it user interactive take note of the sightings field of the
  bird object, to be automatically set to 0 initially.
 

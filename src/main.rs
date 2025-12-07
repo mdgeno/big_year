@@ -26,9 +26,14 @@ fn main(){
 	println!(" ");
 
 	birds.spotted(&String::from("bird2_name"));
+	birds.spotted(&String::from("bird2_name"));
 	birds.all();
 
 	birds.spotted(&String::from("random"));	
+
+	println!(" ");
+	
+	birds.view(&String::from("bird2_name"));
 
 }
 	
