@@ -1,4 +1,5 @@
 use crate::game::Bird;
+use std::io::{self, Write};
 
 pub struct BirdDatabase{
 	birds: Vec<Bird>
@@ -9,11 +10,25 @@ impl BirdDatabase{
 		Self{ birds: Vec::new() }
 	}
 
-	pub fn add(&mut self, bird: Bird){
+	pub fn add(&mut self){
+		
+		print!("Name: ");
+		io::stdout().flush().unwrap();
 
-		//when the program is refactored to be user interactive,
-		//make sure to automatically set the sightings field of
-		//the bird object to 0 initiatlly
+		let mut b_name = String::new();
+		io::stdin().read_line(&mut b_name).expect("enter correct input");
+		
+		
+		print!("Name in Latin: ");
+		io::stdout().flush().unwrap();
+
+		let mut b_latin_name = String::new();
+		io::stdin().read_line(&mut b_latin_name).expect("enter correct input");
+		
+		let bird = Bird{ name: b_name,
+				 latin_name: b_latin_name,
+				 sightings: 0
+				};
 
 		self.birds.push(bird);
 	}

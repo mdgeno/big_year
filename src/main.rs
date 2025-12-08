@@ -1,13 +1,31 @@
 use crate::backend::database::BirdDatabase;
-use crate::game::Bird;
+use std::io::{self, Write};
 
 mod backend;
 mod game;
 
 fn main(){
-	
+
 	let mut birds = BirdDatabase::new_list();
 
+	print!("? ");
+	io::stdout().flush().unwrap();
+
+	let mut input = String::new();
+	io::stdin().read_line(&mut input).expect("enter correct input");
+
+	match input.trim(){
+		"Add"         => birds.add(),
+/*
+		"Observation" =>
+		"All"         =>
+		"One"         =>
+		"Quit"        =>
+*/              _             => println!("enter correct command")
+	}
+	
+	
+/*
 	let bird1 = Bird{ name: String::from("bird1_name"),
 			  latin_name: String::from("bird1_latin_name"),
 			  sightings: 0
@@ -34,6 +52,6 @@ fn main(){
 	println!(" ");
 	
 	birds.view(&String::from("bird2_name"));
-
+*/
 }
 	
