@@ -17,8 +17,7 @@ impl BirdDatabase{
 
 		let mut b_name = String::new();
 		io::stdin().read_line(&mut b_name).expect("enter correct input");
-		
-		
+				
 		print!("Name in Latin: ");
 		io::stdout().flush().unwrap();
 
@@ -35,26 +34,40 @@ impl BirdDatabase{
 
 	pub fn all(&self){
 		for bird in &self.birds{
-			println!("{} ({}): number of sightings {}", bird.name, bird.latin_name, bird.sightings);
+			println!("{} ({}): number of sightings {}", bird.name.trim(), bird.latin_name.trim(), bird.sightings);
 		}
 	}
 
-	pub fn spotted(&mut self, bird_name: &String){
+	pub fn spotted(&mut self){
+		let bird = Self::b_name();
+
 		for b in &mut self.birds{
-			if b.name == *bird_name{
+			if b.name == bird{
 				b.sightings +=1;
 				return;
 			}
 		}	
-		println!("not a bird");
+		println!("Not a bird!");
 	}
 
-	pub fn view(&self, bird_name: &String){
+	pub fn view(&self){
+		let bird = Self::b_name();
+
 		for b in &self.birds{
-			if b.name == *bird_name{
-				println!("{} ({}): number of sightings {}", b.name, b.latin_name, b.sightings);
+			if b.name == bird{
+				println!("{} ({}): number of sightings {}", b.name.trim(), b.latin_name.trim(), b.sightings);
 				break;
 			}
 		}
+	}
+
+	fn b_name() -> String{
+		print!("Bird? ");
+		io::stdout().flush().unwrap();
+
+		let mut b_name = String::new();
+		io::stdin().read_line(&mut b_name).expect("enter correct name");
+
+		b_name
 	}
 }

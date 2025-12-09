@@ -40,7 +40,8 @@
  one commands. <OK>
 
 CONTINUE HERE!
--continue with other commands!
+-continue with other commands!<Ok>
+-try to refactor the user prompt of spotted and view methods <Ok>
 
 
 
