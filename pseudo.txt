@@ -1,3 +1,5 @@
+TEST!
+
 -ask the user for input '?'
 
 -the program recognises the below commands;
